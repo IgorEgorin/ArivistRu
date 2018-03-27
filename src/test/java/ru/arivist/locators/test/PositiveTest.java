@@ -1,24 +1,15 @@
 package ru.arivist.locators.test;
 
 import org.junit.Test;
-import ru.arivist.test.locators.DriverPreconditions;
-
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
+import ru.arivist.test.locators.OverAllPage;
 
 /**
  * Created by 1 on 23.03.2018.
  */
-public class PositiveTest extends DriverPreconditions {
-
-
-    public PositiveTest(String stringList) {
-        super(stringList);
-    }
+public class PositiveTest extends OverAllPage {
 
     @Test
     public void positiveTest() {
-        $("#user-lk").hover();
-        sleep(8000);
+        header.enterLogInAndPassword("test", "ValidPassword");
     }
 }

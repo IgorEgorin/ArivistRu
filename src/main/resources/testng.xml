@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "FirstTestSuite" parallel="tests" thread-count="2">
+
+    <test name = "LogInTest-FF">
+        <parameter name="browser" value="FireFox"/>
+        <classes>
+            <class name = "ru.arivist.test.locators.DriverPreTwo">
+                    <methods>
+                        <include name="positiveTest"></include>
+                    </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name = "LogInTest-CH">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name = "ru.arivist.test.locators.DriverPreTwo">
+                <methods>
+                    <include name="positiveTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
